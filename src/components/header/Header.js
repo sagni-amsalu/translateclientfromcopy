@@ -66,7 +66,7 @@ const Header = () => {
     const user = JSON.parse(userr);
 
     console.log("hist is-", user);
-    console.log("the user id-", user.data.userID);
+    console.log("the user id-", user?.data?.userID);
 
     console.log("uuuu-", user);
     //console.log("user isss-", user.user);
