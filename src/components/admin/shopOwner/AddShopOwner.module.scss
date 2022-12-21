@@ -1,0 +1,48 @@
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.formContainer {
+  //   @include flex-center;
+  display: flex;
+  flex-direction: column;
+
+  .frmgrp {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-left: 20px;
+    label {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    input {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 300;
+      padding: 1rem;
+      margin: 1rem auto;
+      width: 100%;
+      border: 1px solid #777;
+      border-radius: 3px;
+      outline: none;
+    }
+    button {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 300;
+      padding: 1rem;
+      margin: 1rem auto;
+      width: 100%;
+      border: 1px solid #ff5733;
+      border-radius: 3px;
+      background: #ff5733;
+      opacity: 0.6;
+      transition: 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
