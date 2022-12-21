@@ -69,7 +69,7 @@ const AddServiceCategory = () => {
 
     try {
       const res = await axios.get(
-        "http://localhost:7000/api/clients/getServiceCategories"
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/getServiceCategories"
       );
       setServcategories(res.data.data);
       toast.success("Users Loaded");
@@ -100,7 +100,7 @@ const AddServiceCategory = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:7000/api/clients/AddServiceCategory",
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/AddServiceCategory",
         serviceCat,
         {
           headers: authHeader(),
@@ -131,7 +131,7 @@ const AddServiceCategory = () => {
     setIsLoading(true);
     try {
       const res = await axios.patch(
-        `http://localhost:7000/api/clients/updateServiceCategory/${id}`,
+        `https://translateapi2-sagni-amsalu.onrender.com/api/clients/updateServiceCategory/${id}`,
         servcat
       );
       console.log(res.data);

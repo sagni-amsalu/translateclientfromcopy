@@ -42,7 +42,7 @@ const ViewUsers = () => {
 
     try {
       const res = await axios.get(
-        "http://localhost:7000/api/clients/getUsers",
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/getUsers",
         { headers: authHeader() }
       );
       console.log(res.data.data);
@@ -88,7 +88,7 @@ const ViewUsers = () => {
       // await deleteObject(storageRef);  /deleteUser/:id
 
       const res = await axios.delete(
-        `http://localhost:7000/api/clients/deleteUser/${id}`,
+        `https://translateapi2-sagni-amsalu.onrender.com/api/clients/deleteUser/${id}`,
         { headers: authHeader() }
       );
       //console.log(res.data.data);

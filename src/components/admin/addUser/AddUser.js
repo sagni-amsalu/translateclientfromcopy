@@ -83,7 +83,9 @@ const AddUser = () => {
     setIsLoading(true);
 
     try {
-      const res = await axios.get("http://localhost:7000/api/clients/getUsers");
+      const res = await axios.get(
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/getUsers"
+      );
 
       setUsers(res.data.data);
 
@@ -135,7 +137,7 @@ const AddUser = () => {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:7000/api/clients/AddUser",
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/AddUser",
         user
       );
       console.log(res.data);
@@ -168,7 +170,7 @@ const AddUser = () => {
     setIsLoading(true);
     try {
       const res = await axios.patch(
-        `http://localhost:7000/api/clients/updateUser/${id}`,
+        `https://translateapi2-sagni-amsalu.onrender.com/api/clients/updateUser/${id}`,
         userr
       );
       console.log(res.data);

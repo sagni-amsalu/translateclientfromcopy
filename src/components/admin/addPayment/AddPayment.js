@@ -67,7 +67,7 @@ const AddPayment = () => {
 
     try {
       const res = await axios.get(
-        "http://localhost:7000/api/clients/getPayments"
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/getPayments"
       );
       setPayments(res.data.data);
       toast.success("Users Loaded");
@@ -97,7 +97,7 @@ const AddPayment = () => {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:7000/api/clients/AddPayment",
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/AddPayment",
         payment
       );
       console.log(res.data);
@@ -125,7 +125,7 @@ const AddPayment = () => {
     setIsLoading(true);
     try {
       const res = await axios.patch(
-        `http://localhost:7000/api/clients/updatePayment/${id}`,
+        `https://translateapi2-sagni-amsalu.onrender.com/api/clients/updatePayment/${id}`,
         paymentt
       );
       console.log(res.data);

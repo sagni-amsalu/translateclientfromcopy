@@ -42,7 +42,7 @@ const ViewFileHistory = () => {
 
     try {
       const res = await axios.get(
-        "http://localhost:7000/api/clients/getFileHistorys",
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/getFileHistorys",
         { headers: authHeader() }
       );
       console.log(res.data.data);
@@ -88,7 +88,7 @@ const ViewFileHistory = () => {
       // await deleteObject(storageRef);  /deleteUser/:id
 
       const res = await axios.delete(
-        `http://localhost:7000/api/clients/deleteFileHistory/${id}`,
+        `https://translateapi2-sagni-amsalu.onrender.com/api/clients/deleteFileHistory/${id}`,
         { headers: authHeader() }
       );
       //console.log(res.data.data);

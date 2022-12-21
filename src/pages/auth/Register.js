@@ -50,7 +50,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:7000/api/clients/signup",
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/signup",
         post
       );
       console.log(res.data);

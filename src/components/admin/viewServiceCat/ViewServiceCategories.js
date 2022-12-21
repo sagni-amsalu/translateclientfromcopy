@@ -42,7 +42,7 @@ const ViewServiceCategories = () => {
 
     try {
       const res = await axios.get(
-        "http://localhost:7000/api/clients/getServiceCategories",
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/getServiceCategories",
         { headers: authHeader() }
       );
       console.log(res.data.data);
@@ -88,7 +88,7 @@ const ViewServiceCategories = () => {
       // await deleteObject(storageRef);  /deleteUser/:id
 
       const res = await axios.delete(
-        `http://localhost:7000/api/clients/deleteServiceCategory/${id}`,
+        `https://translateapi2-sagni-amsalu.onrender.com/api/clients/deleteServiceCategory/${id}`,
         { headers: authHeader() }
       );
       //console.log(res.data.data);

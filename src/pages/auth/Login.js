@@ -62,7 +62,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:7000/api/clients/login",
+        "https://translateapi2-sagni-amsalu.onrender.com/api/clients/login",
         post
       );
 
