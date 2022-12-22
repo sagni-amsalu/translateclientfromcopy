@@ -109,7 +109,7 @@ const Trans = () => {
     };
 
     const res = await axios.post(
-      "http://localhost:7000/api/clients/FHist",
+      "https://translateapi2-sagni-amsalu.onrender.com/api/clients/FHist",
       histdata
     );
     console.log(res.data);
@@ -248,7 +248,7 @@ const Trans = () => {
     };
 
     const res = await axios.post(
-      "http://localhost:7000/api/clients/FHist",
+      "https://translateapi2-sagni-amsalu.onrender.com/api/clients/FHist",
       histdata
     );
 
