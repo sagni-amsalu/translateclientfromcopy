@@ -109,7 +109,7 @@ const Trans = () => {
     };
 
     const res = await axios.post(
-      "https://translateapi2-sagni-amsalu.onrender.com/api/clients/FHist",
+      "http://localhost:7000/api/clients/FHist",
       histdata
     );
     console.log(res.data);
@@ -221,6 +221,13 @@ const Trans = () => {
       if (!text) return;
       toText.setAttribute("placeholder", "Translating....");
 
+      let APIUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+      fetch(APIUrl)
+        .then((res) => res.json())
+        .then((result) => {
+          toText.value = result.responseData.translatedText;
+        });
+
       sendhistory("63a20a1fd6b1acfff083b6c7", text.length);
     });
   }, []);
@@ -241,7 +248,7 @@ const Trans = () => {
     };
 
     const res = await axios.post(
-      "https://translateapi2-sagni-amsalu.onrender.com/api/clients/FHist",
+      "http://localhost:7000/api/clients/FHist",
       histdata
     );
 
