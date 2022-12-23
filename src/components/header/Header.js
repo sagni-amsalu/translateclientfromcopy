@@ -146,7 +146,7 @@ const Header = () => {
               <LoggedUserOnlyRoute>
                 <li>
                   <NavLink to="/trans" className={activeLink}>
-                    Trans
+                    Translation
                   </NavLink>
                 </li>
               </LoggedUserOnlyRoute>
