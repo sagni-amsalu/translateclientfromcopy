@@ -65,7 +65,7 @@ const DashBoard = () => {
     <div className={styles.menu}>
       {/* <h1>import data displayed in here</h1> */}
       <div className={styles.rightContainer}>
-        <DashCard title="Total Paid" data={totalPay} desc="Birr" />
+        <DashCard title="Total Paid Amount" data={totalPay} desc="Birr" />
         <DashCard
           title="Total Extracted"
           data={totalExtract}
