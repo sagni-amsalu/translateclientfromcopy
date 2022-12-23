@@ -153,7 +153,22 @@ const Header = () => {
               <AdminOnlyRoute>
                 <li>
                   <NavLink to="/trans" className={activeLink}>
-                    Trans
+                    Translation
+                  </NavLink>
+                </li>
+              </AdminOnlyRoute>
+              <LoggedUserOnlyRoute>
+                <li>
+                  <NavLink to="/dash-board" className={activeLink}>
+                    Status
+                  </NavLink>
+                </li>
+              </LoggedUserOnlyRoute>
+
+              <AdminOnlyRoute>
+                <li>
+                  <NavLink to="/dash-board" className={activeLink}>
+                    Status
                   </NavLink>
                 </li>
               </AdminOnlyRoute>

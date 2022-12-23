@@ -26,18 +26,25 @@ const ContactUS = () => {
   const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  var templateParams = {
-    from_name: name,
-    message,
-    phone,
-    email_id: email,
-  };
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-  const sendEmail = async () => {
+    var templateParams = {
+      from_name: name,
+      message,
+      phone,
+      email_id: email,
+    };
+
     try {
+      // console.log(templateParams);
       emailjs.send("service_4hdghgw", "template_73ei08x", templateParams).then(
         function (response) {
           toast.success("Successfully submitted your message! Thank you");
+          setName("");
+          setMessage("");
+          setPhone("");
+          setEmail("");
         },
         function (error) {
           toast.error("Failed to Submit your message");
@@ -47,7 +54,6 @@ const ContactUS = () => {
       toast.error("Failed to Submit your message");
     }
   };
-
   useState(() => {
     (function () {
       emailjs.init("-l3bEH4Oankwj3_T2");

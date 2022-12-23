@@ -19,6 +19,7 @@ import Trans from "./pages/trans/Trans";
 import ContactUS from "./pages/auth/Contactus";
 
 import { MantineProvider } from "@mantine/core";
+import DashBoard from "./pages/dash/DashBoard";
 
 // import Amplify from "@aws-amplify/core";
 // import Auth from "@aws-amplify/auth";
@@ -120,6 +121,7 @@ function App() {
           <Route path="/logout" element={<Reset />} />
 
           <Route path="/trans" element={<Trans />} />
+          <Route path="/dash-board" element={<DashBoard />} />
 
           <Route
             path="/admin/*"
