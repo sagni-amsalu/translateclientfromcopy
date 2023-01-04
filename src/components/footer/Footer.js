@@ -8,7 +8,7 @@ const Footer = () => {
     <div className={styles.footer}>
       &copy;{year} All Rights Reserved!
       <div style={{ marginLeft: "30px" }}>
-        WirtuTech Software Solutions/+251 9 10 15 8781
+        WirtuTech Software Solutions/+251 9 10 15 8781 / +256 759 229 296
       </div>
     </div>
   );
